@@ -9,13 +9,14 @@ from skimage.segmentation import clear_border
 import pandas as pd
 
 pixels_to_microns = 0.586
-proplist = ['label','area','convex_area','filled_area','major_axis_length','minor_axis_length','perimeter',
-            'equivalent_diameter','extent']
+proplist = ['area','convex_area','filled_area','major_axis_length','minor_axis_length',
+            'perimeter','equivalent_diameter','extent']
 
 path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Bandanorm/*.png"
 
 
-
+data= []
+i=0
 
 for file in glob.glob(path):
     ig1 = io.imread(file)
@@ -50,16 +51,28 @@ for file in glob.glob(path):
     markers[unknown==255] = 0
     markers = cv2.watershed(img1,markers)
     props = regionprops_table(markers, intensity_image=img, properties=proplist)
-    data = pd.DataFrame(props)
-    data['equivalent_diameter'] = data['equivalent_diameter'] * pixels_to_microns
-    data['area'] = data['area'] * pixels_to_microns * pixels_to_microns
-    # img1[markers==-1] = [0,255,255]
-    # img2 = color.label2rgb(markers,bg_label=0)
-    # f, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 5))
-    # ax0.imshow(img1, cmap='gray')
-    # ax1.imshow(img2, cmap='gray')
-    # plt.show()
+    props_df = pd.DataFrame(props)
+    print(props_df)
+    props_df['img'] = i
+    i += 1
+    data.append(props_df)
+    img1[markers==-1] = [0,255,255]
+    img2 = color.label2rgb(markers,bg_label=0)
+    f, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 5))
+    ax0.imshow(img1, cmap='gray')
+    ax1.imshow(img2, cmap='gray')
+    plt.show()
 
+df = pd.concat(data)
+df['equivalent_diameter'] = df['equivalent_diameter'] * pixels_to_microns
+df['area'] = df['area'] * pixels_to_microns **2
+df['convex_area']=df['convex_area']*pixels_to_microns**2
+df['filled_area']=df['filled_area']*pixels_to_microns**2
+df['extent'] = df['extent']*pixels_to_microns**2
+df['major_axis_length'] = df['major_axis_length']*pixels_to_microns
+df['minor_axis_length'] = df['minor_axis_length']*pixels_to_microns
+df['perimeter'] = df['perimeter']*pixels_to_microns
+df.to_pickle("C:/Users/juanr/Documents/defects_df.pkl")
 
 
 
