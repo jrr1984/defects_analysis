@@ -44,5 +44,5 @@ df['extent'] = df['extent']*pixels_to_microns**2
 df['major_axis_length'] = df['major_axis_length']*pixels_to_microns
 df['minor_axis_length'] = df['minor_axis_length']*pixels_to_microns
 df['perimeter'] = df['perimeter']*pixels_to_microns
-df.to_pickle("C:/Users/juanr/Documents/data_mediciones/defects_df.pkl")
+df.to_pickle("C:/Users/juanr/Documents/data_mediciones/defects/defects_df.pkl")
 
