@@ -24,9 +24,10 @@ for file in glob.glob(path):
     img1 = util.img_as_ubyte(img1)
     img = util.invert(ig1)
     img = util.img_as_ubyte(img)
-
+    # plt.hist(img.ravel(), 256, [0, 256]);
+    # plt.show()
     # ret1,thresh = cv2.threshold(img,10,255,cv2.THRESH_BINARY +cv2.THRESH_OTSU)
-    ret,thresh = cv2.threshold(img,15,255,cv2.THRESH_BINARY)
+    ret,thresh = cv2.threshold(img,100,255,cv2.THRESH_BINARY)
     # f, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 5))
     # ax0.imshow(img1, cmap='gray')
     # ax1.imshow(thresh, cmap='gray')
@@ -43,7 +44,7 @@ for file in glob.glob(path):
 
     sure_bg = cv2.dilate(opening,kernel,iterations=1)
     dist_transform = cv2.distanceTransform(opening,cv2.DIST_L2,3)
-    ret2,sure_fg = cv2.threshold(dist_transform,0.2*dist_transform.max(),255,0)
+    ret2,sure_fg = cv2.threshold(dist_transform,0.1*dist_transform.max(),255,0)
     sure_fg = np.uint8(sure_fg)
     unknown = cv2.subtract(sure_bg,sure_fg)
     ret3,markers = cv2.connectedComponents(sure_fg)
