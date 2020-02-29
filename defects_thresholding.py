@@ -3,7 +3,6 @@ from skimage import io,measure
 from skimage.measure import regionprops_table
 from skimage.color import label2rgb
 
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import glob
@@ -30,10 +29,10 @@ for file in glob.glob(path):
     data.append(props_df)
 
     image_label_overlay = label2rgb(label_image, image=img,bg_label=0)
-    # f, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 5))
-    # ax0.imshow(binary, cmap='gray')
-    # ax1.imshow(image_label_overlay, cmap='gray')
-    # plt.show()
+    f, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 5))
+    ax0.imshow(binary, cmap='gray')
+    ax1.imshow(image_label_overlay, cmap='gray')
+    plt.show()
 
 df = pd.concat(data)
 df['equivalent_diameter'] = df['equivalent_diameter'] * pixels_to_microns
