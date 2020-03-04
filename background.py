@@ -20,9 +20,9 @@ median = np.median(imgs, axis=0).reshape(1920, 1216)
 
 median = util.img_as_ubyte(median)
 
-background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/background.png",median)
+background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/background_img.png",median)
 
-bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/background.png")
+bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/background_img.png")
 fig = plt.figure(figsize=(10, 10), frameon=False)
 ax = fig.add_axes([0, 0, 1, 1])
 ax.axis('off')
