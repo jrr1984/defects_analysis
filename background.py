@@ -18,7 +18,7 @@ imgs = np.vstack([img.reshape(3,img.shape[0] * img.shape[1]) for img in imgs])
 
 median = np.median(imgs, axis=0).reshape(1920, 1216)
 
-median = util.img_as_ubyte(median)
+# median = util.img_as_ubyte(median)
 
 background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/background_img.png",median)
 

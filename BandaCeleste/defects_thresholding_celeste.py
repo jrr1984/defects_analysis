@@ -2,7 +2,7 @@ from skimage.filters import threshold_yen
 from skimage import io,measure
 from skimage.measure import regionprops_table
 from skimage.color import label2rgb
-
+import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import glob
@@ -11,12 +11,14 @@ pixels_to_microns = 0.586
 proplist = ['area','convex_area','filled_area','major_axis_length','minor_axis_length',
             'perimeter','equivalent_diameter','extent']
 
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda_Celeste/Celeste/norm_cel/*.png"
+# path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda_Celeste/Celeste/norm_cel/*.png"
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/*.png"
+# path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/Tiles/*.png"
 data= []
 i=0
 
 for file in glob.glob(path):
-    img = io.imread(file)
+    img = io.imread(file).astype(np.uint16)
     thresh = threshold_yen(img)
     binary = img <= thresh
     label_image = measure.label(binary)
@@ -24,11 +26,12 @@ for file in glob.glob(path):
     props = regionprops_table(label_image, intensity_image=img, properties=proplist)
     props_df = pd.DataFrame(props)
     print(props_df)
+    print(file,i)
     props_df['img'] = i
     i += 1
     data.append(props_df)
 
-    image_label_overlay = label2rgb(label_image, image=img,bg_label=0)
+    # image_label_overlay = label2rgb(label_image, image=img, bg_label=0)
     # f, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 5))
     # ax0.imshow(binary, cmap='gray')
     # ax1.imshow(image_label_overlay, cmap='gray')
@@ -43,5 +46,5 @@ df['extent'] = df['extent']*pixels_to_microns**2
 df['major_axis_length'] = df['major_axis_length']*pixels_to_microns
 df['minor_axis_length'] = df['minor_axis_length']*pixels_to_microns
 df['perimeter'] = df['perimeter']*pixels_to_microns
-df.to_pickle("C:/Users/juanr/Documents/data_mediciones/defects/defectsceleste_df.pkl")
+df.to_pickle("C:/Users/juanr/Documents/data_mediciones/defects/defectsNIR_df.pkl")
 
