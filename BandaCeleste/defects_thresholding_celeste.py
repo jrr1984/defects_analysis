@@ -11,14 +11,14 @@ pixels_to_microns = 0.586
 proplist = ['area','convex_area','filled_area','major_axis_length','minor_axis_length',
             'perimeter','equivalent_diameter','extent']
 
-# path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda_Celeste/Celeste/norm_cel/*.png"
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/*.png"
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/norm_cel/*.tif"
+# path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/*.png"
 # path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/Tiles/*.png"
 data= []
 i=0
 
 for file in glob.glob(path):
-    img = io.imread(file).astype(np.uint16)
+    img = io.imread(file)
     thresh = threshold_yen(img)
     binary = img <= thresh
     label_image = measure.label(binary)
@@ -46,5 +46,5 @@ df['extent'] = df['extent']*pixels_to_microns**2
 df['major_axis_length'] = df['major_axis_length']*pixels_to_microns
 df['minor_axis_length'] = df['minor_axis_length']*pixels_to_microns
 df['perimeter'] = df['perimeter']*pixels_to_microns
-df.to_pickle("C:/Users/juanr/Documents/data_mediciones/defects/defectsNIR_df.pkl")
+df.to_pickle("C:/Users/juanr/Documents/data_mediciones/defects/defectsCeleste_df.pkl")
 

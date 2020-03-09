@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebd7c2a-ec8d-4bc8-a70a-d61849195602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hist_equalization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banda Celeste/bg_celeste.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banda Celeste/bg_normalization_celeste.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banda Celeste/defects_thresholding_celeste.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banda Celeste/divv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Defects analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Defects analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/background.py" beforeDir="false" afterPath="$PROJECT_DIR$/background.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/defects_detection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/defects_detection.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/espectro_lampara_ZEISS.py" beforeDir="false" afterPath="$PROJECT_DIR$/espectro_lampara_ZEISS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BandaCeleste/bg_celeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/BandaCeleste/bg_celeste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py" beforeDir="false" afterPath="$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_equalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/hist_equalization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hist_equalization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="902">
+              <caret line="46" column="73" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="73" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -36,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BandaCeleste/bg_celeste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="29">
+              <caret line="5" column="79" lean-forward="true" selection-start-line="5" selection-end-line="5" selection-end-column="79" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -48,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="330">
               <caret line="20" selection-start-line="20" selection-end-line="23" selection-end-column="48" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -60,20 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/background.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+            <state relative-caret-position="286">
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="52" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -82,10 +65,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1129">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="154">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -123,6 +118,8 @@
       <find>26.07</find>
       <find>44</find>
       <find>44.</find>
+      <find>uint</find>
+      <find>data</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\juanr\Documents\defects_analysis</dir>
@@ -155,10 +152,10 @@
         <option value="$PROJECT_DIR$/Banda Celeste/defects_thresholding_celeste.py" />
         <option value="$PROJECT_DIR$/Banda Celeste/bg_celeste.py" />
         <option value="$PROJECT_DIR$/background.py" />
-        <option value="$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py" />
         <option value="$PROJECT_DIR$/hist_equalization.py" />
         <option value="$PROJECT_DIR$/BandaCeleste/bg_celeste.py" />
         <option value="$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py" />
+        <option value="$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py" />
       </list>
     </option>
   </component>
@@ -359,14 +356,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" x="0" y="0" width="1280" height="680" id="Run" order="2" type="FLOATING" weight="0.9468085" />
+      <window_info active="true" anchor="bottom" x="0" y="0" width="1280" height="680" id="Run" order="2" type="FLOATING" visible="true" weight="0.9468085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -521,20 +517,10 @@
     <entry file="file://$PROJECT_DIR$/Banda Celeste/bg_normalization_celeste.py" />
     <entry file="file://$PROJECT_DIR$/Banda Celeste/defects_thresholding_celeste.py" />
     <entry file="file://$PROJECT_DIR$/Banda Celeste/bg_celeste.py" />
-    <entry file="file://$PROJECT_DIR$/background.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hist_equalization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="902">
+          <caret line="46" column="73" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="73" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -543,8 +529,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="330">
           <caret line="20" selection-start-line="20" selection-end-line="23" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="52" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -553,8 +549,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BandaCeleste/bg_celeste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="29">
+          <caret line="5" column="79" lean-forward="true" selection-start-line="5" selection-end-line="5" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1129">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -563,20 +569,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="154">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

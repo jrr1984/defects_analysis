@@ -2,7 +2,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-from skimage import data, img_as_float
+from skimage import data, img_as_float,img_as_uint
 from skimage import exposure,io
 
 matplotlib.rcParams['font.size'] = 8
@@ -36,13 +36,15 @@ def plot_img_and_hist(image, axes, bins=256):
 
 
 # Load an example image
-img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_1.png")
+# img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_1.png")
+img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/bg_celeste.png").astype(np.uint16)
 # Gamma
 gamma_corrected = exposure.adjust_gamma(img, 2)
 
 # Logarithmic
 logarithmic_corrected = exposure.adjust_log(img, 1)
-# imag = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Banda_Roja/Tiles/Banda_Roja_m001_ORG_LOG.png",logarithmic_corrected)
+logarithmic_corrected = img_as_uint(logarithmic_corrected)
+imag = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/bggcel.png",logarithmic_corrected)
 
 # Display results
 fig = plt.figure(figsize=(8, 5))
