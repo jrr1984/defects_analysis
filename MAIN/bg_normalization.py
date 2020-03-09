@@ -5,17 +5,13 @@ from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 import glob
 
-# path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/Tiles/*.png"
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/Celeste/*.png"
-bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/back.tif")
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/Tiles/*.png"
+bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/back_NIR.tif")
 bg_mean = np.mean(bg)
 
 i=0
 
 def plot_img_and_hist(image, axes, bins=256):
-    """Plot an image along with its histogram and cumulative histogram.
-
-    """
     image = img_as_float(image)
     ax_img, ax_hist = axes
     ax_cdf = ax_hist.twinx()
@@ -51,10 +47,10 @@ for file in glob.glob(path):
     result = img_norm - bg_norm
     result = result - np.min(result)
     result = result/np.max(result)
-    save_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/norm_cel/normCel_{}.tif".format(str(i)), result)
+    save_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_{}.tif".format(str(i)), result)
 
 
-    # normm = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/norm_cel/normCel_{}.tif".format(str(i)))
+    # normm = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_{}.tif".format(str(i)))
     # fig = plt.figure(figsize=(10, 7))
     # axes = np.zeros((2, 3), dtype=np.object)
     # axes[0, 0] = plt.subplot(2, 3, 1)
