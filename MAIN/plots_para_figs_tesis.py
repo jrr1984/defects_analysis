@@ -1,16 +1,18 @@
 import matplotlib.pyplot as plt
 import glob
 from skimage import io
-
-bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/back_NIR.tif")
+plt.rcParams["font.size"] = "15"
+# bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/back_NIR.tif")
+bg = io.imread("C:/Users/juanr/Documents/master_thesis_scratch_and_dig/tesis_tex/Figs/defectosZEISS/img_ideal_2defectos.png")
 fig = plt.figure(figsize=(10, 10), frameon=False)
 ax = fig.add_axes([0, 0, 1, 1])
 ax.axis('off')
 plt.imshow(bg, cmap='Greys_r')
+# bins = 500
+plt.figure(2)
+# plt.hist(bg.ravel(), bins=bins, color='Blue', alpha=0.5)
+plt.hist(bg.ravel(), color='Blue', alpha=0.5,log=True)
+plt.xlabel(' Intensidad [u.a.]')
+plt.ylabel('Número de píxeles')
+# plt.xlim(0,1)
 plt.show()
-# f, (ax0, ax1,ax2,ax3) = plt.subplots(1, 4, figsize=(10, 5))
-# ax0.imshow(img, cmap='gray')
-# ax1.imshow(normm, cmap='gray')
-# ax2.imshow(bg, cmap='gray')
-# ax3.imshow(bg2, cmap='gray')
-# plt.show()
