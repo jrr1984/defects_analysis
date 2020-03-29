@@ -6,14 +6,13 @@ from skimage import img_as_float
 from matplotlib_scalebar.scalebar import ScaleBar
 
 
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/Tiles/*png"
-bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/back_NIR.tif")
-
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaRoja/Tiles/*.png"
+bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaRoja/back_Roja.tif")
 bg_mean = np.mean(bg)
 bins = 1000
 i=0
 for file in glob.glob(path):
-    i+=1
+    i += 1
     img = io.imread(file)
     img = img_as_float(img)
     img_mean = np.mean(img)
@@ -24,12 +23,12 @@ for file in glob.glob(path):
     min_result = diff - np.min(diff)
     hist_eq = np.max(diff)-np.min(diff)
     result = min_result/hist_eq
-    save_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_{}.tif".format(str(i)), result)
-
+    save_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaRoja/norm/normRoja_{}.tif".format(str(i)), result)
 
     # normm = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_{}.tif".format(str(i)))
 
 
+"""
     #plot image process step by step comparison
     colmap = 'Greys_r'
     f, axes = plt.subplots(2, 3, figsize=(20, 20),sharex=True,sharey=True)
@@ -67,10 +66,7 @@ for file in glob.glob(path):
     plt.setp(axes[:, 0], ylabel='y [\u03BCm]')
     plt.show()
 
-    #plot of histogram of the diagonal for comparison
-
-
-
+"""
 
 
 

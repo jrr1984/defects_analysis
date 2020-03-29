@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebd7c2a-ec8d-4bc8-a70a-d61849195602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MAIN/hist_equalization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIN/local_thresholding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIN/try_all_thresholds.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/try_stars.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Defects analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Defects analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIN/bg.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/bg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIN/bg_normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/bg_normalization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIN/defects_thresholding.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/defects_thresholding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,20 +23,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="110">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAIN/bg_normalization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+            <state relative-caret-position="154">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -39,11 +41,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MAIN/try_all_thresholds.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/try_stars.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAIN/bg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="46" column="18" lean-forward="true" selection-start-line="44" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="176">
+              <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -122,15 +145,18 @@
         <option value="$PROJECT_DIR$/BandaCeleste/bg_normalization_celeste.py" />
         <option value="$PROJECT_DIR$/BandaCeleste/defects_thresholding_celeste.py" />
         <option value="$PROJECT_DIR$/BandaCeleste/bg_celeste.py" />
-        <option value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
         <option value="$PROJECT_DIR$/MAIN/plot_img_and_hist.py" />
         <option value="$PROJECT_DIR$/MAIN/bg_plot_and_hist.py" />
-        <option value="$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py" />
         <option value="$PROJECT_DIR$/exp_fit.py" />
         <option value="$PROJECT_DIR$/MAIN/axes_grid.py" />
-        <option value="$PROJECT_DIR$/MAIN/bg.py" />
         <option value="$PROJECT_DIR$/MAIN/hist_equalization.py" />
+        <option value="$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py" />
+        <option value="$PROJECT_DIR$/MAIN/bg.py" />
         <option value="$PROJECT_DIR$/MAIN/bg_normalization.py" />
+        <option value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
+        <option value="$PROJECT_DIR$/MAIN/local_thresholding.py" />
+        <option value="$PROJECT_DIR$/try_stars.py" />
+        <option value="$PROJECT_DIR$/MAIN/try_all_thresholds.py" />
       </list>
     </option>
   </component>
@@ -144,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,7 +187,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,28 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bg_normalization">
-    <configuration name="bg" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="defects_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MAIN" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/bg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.try_all_thresholds">
     <configuration name="bg_normalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="defects_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,28 +227,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="exp_fit" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="defects_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exp_fit.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="hist_equalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="defects_thresholding" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="defects_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -255,7 +239,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/hist_equalization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="local_thresholding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="defects_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MAIN" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/local_thresholding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -285,7 +290,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plots_para_figs_tesis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="try_all_thresholds" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="defects_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,7 +302,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/try_all_thresholds.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="try_stars" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="defects_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/try_stars.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -308,11 +334,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.try_all_thresholds" />
+        <item itemvalue="Python.try_stars" />
+        <item itemvalue="Python.local_thresholding" />
+        <item itemvalue="Python.defects_thresholding" />
         <item itemvalue="Python.bg_normalization" />
-        <item itemvalue="Python.hist_equalization" />
-        <item itemvalue="Python.bg" />
-        <item itemvalue="Python.exp_fit" />
-        <item itemvalue="Python.plots_para_figs_tesis" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +364,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" x="0" y="0" width="1280" height="623" id="Run" order="2" type="FLOATING" weight="0.9468085" />
+      <window_info anchor="bottom" x="0" y="0" width="1280" height="680" id="Run" order="2" type="FLOATING" weight="0.9468085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -539,32 +565,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/axes_grid.py" />
-    <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/plot_img_and_hist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="5" column="119" selection-start-line="5" selection-start-column="119" selection-end-line="5" selection-end-column="119" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -589,10 +595,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/bg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="46" column="18" lean-forward="true" selection-start-line="44" selection-end-line="46" selection-end-column="18" />
+        <state relative-caret-position="176">
+          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -601,10 +617,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/bg_normalization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        <state relative-caret-position="154">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIN/local_thresholding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/try_stars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIN/try_all_thresholds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
