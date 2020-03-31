@@ -1,13 +1,14 @@
 import numpy as np
 from skimage import io
 import matplotlib.pyplot as plt
+from matplotlib_scalebar.scalebar import ScaleBar
 import glob
 from skimage import img_as_float
-from matplotlib_scalebar.scalebar import ScaleBar
 
 
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaRoja/Tiles/*.png"
-bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaRoja/back_Roja.tif")
+
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/Tiles/*.png"
+bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/back_Azul.tif")
 bg_mean = np.mean(bg)
 bins = 1000
 i=0
@@ -23,7 +24,7 @@ for file in glob.glob(path):
     min_result = diff - np.min(diff)
     hist_eq = np.max(diff)-np.min(diff)
     result = min_result/hist_eq
-    save_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaRoja/norm/normRoja_{}.tif".format(str(i)), result)
+    save_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/norm/normAzul_{}.tif".format(str(i)), result)
 
     # normm = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/NIR/norm/normNIR_{}.tif".format(str(i)))
 
