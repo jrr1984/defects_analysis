@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebd7c2a-ec8d-4bc8-a70a-d61849195602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MAIN/tapado_112azul.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Defects analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Defects analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN/bg.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/bg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN/bg_normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/bg_normalization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIN/defects_thresholding.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/defects_thresholding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN/try_all_thresholds.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/try_all_thresholds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIN/tapado_112azul.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/tapado_112azul.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="411">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -30,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAIN/tapado_112azul.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="242">
+              <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="41" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -161,8 +157,8 @@
         <option value="$PROJECT_DIR$/MAIN/try_all_thresholds.py" />
         <option value="$PROJECT_DIR$/MAIN/bg.py" />
         <option value="$PROJECT_DIR$/MAIN/bg_normalization.py" />
-        <option value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
         <option value="$PROJECT_DIR$/MAIN/tapado_112azul.py" />
+        <option value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
       </list>
     </option>
   </component>
@@ -211,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tapado_112azul">
+  <component name="RunManager" selected="Python.defects_thresholding">
     <configuration name="bg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="defects_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -340,8 +336,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tapado_112azul" />
         <item itemvalue="Python.defects_thresholding" />
+        <item itemvalue="Python.tapado_112azul" />
         <item itemvalue="Python.bg_normalization" />
         <item itemvalue="Python.bg" />
         <item itemvalue="Python.try_all_thresholds" />
@@ -363,13 +359,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" x="0" y="0" width="1280" height="680" id="Run" order="2" type="FLOATING" visible="true" weight="0.9468085" />
+      <window_info anchor="bottom" x="0" y="0" width="1280" height="680" id="Run" order="2" type="FLOATING" weight="0.9468085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -657,20 +654,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
+    <entry file="file://$PROJECT_DIR$/MAIN/tapado_112azul.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="19" />
+        <state relative-caret-position="242">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="41" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAIN/tapado_112azul.py">
+    <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="411">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
