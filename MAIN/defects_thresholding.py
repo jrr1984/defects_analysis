@@ -26,22 +26,12 @@ for file in glob.glob(path):
     binary = img <= thresh
     masked_binary =ndimage.binary_fill_holes(binary,structure=np.ones((5,5)))
     hols = masked_binary.astype(int) - binary
-    label_image = measure.label(masked_binary)
 
-
-    contours = measure.find_contours(img, hole_thresh)
-    contour_image = np.zeros(img.shape)
-    for c in contours:
-        c = np.round(c).astype(int)
-        coords = (c[:, 0], c[:, 1])
-        contour_image[coords] = 1
-
-    hole_binary = contour_image >= hole_thresh
-    cont_img = ndimage.binary_fill_holes(hole_binary)
     lab = measure.label(hols)
     cleaned_holes = morphology.remove_small_objects(lab, min_size=47, connectivity=8)
     hole_label = measure.label(cleaned_holes)
 
+    label_image = measure.label(masked_binary)
     props = regionprops_table(label_image, intensity_image=img, properties=proplist)
     props_df = pd.DataFrame(props)
     props_df['img'] = i
