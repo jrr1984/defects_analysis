@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebd7c2a-ec8d-4bc8-a70a-d61849195602" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Defects analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Defects analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIN/defects_thresholding.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/defects_thresholding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN/tapado_112azul.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/tapado_112azul.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,20 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="152" column="85" selection-start-line="152" selection-start-column="85" selection-end-line="152" selection-end-column="85" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MAIN/tapado_112azul.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+            <state relative-caret-position="1320">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -672,8 +657,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="152" column="85" selection-start-line="152" selection-start-column="85" selection-end-line="152" selection-end-column="85" />
+        <state relative-caret-position="1320">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
