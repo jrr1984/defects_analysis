@@ -10,19 +10,20 @@ import pandas as pd
 import cv2
 
 
-img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaVerde/norm/normVerde_84.tif")
+img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/norm/normAzul_112.tif")
 img = img_as_float(img)
 thresh = threshold_yen(img)
+print(thresh)
 binary = img <= thresh
-masked_binary = ndimage.binary_fill_holes(binary,structure=np.ones((5,5)))
+masked_binary = ndimage.binary_fill_holes(binary)
 hols = masked_binary.astype(int) - binary
 # cleaned_binary = morphology.remove_small_objects(masked_binary, 2)
-label_image = measure.label(masked_binary)
+label_image = measure.label(binary)
 proplist = ['area','equivalent_diameter']
 props = regionprops_table(label_image, intensity_image=img, properties=proplist)
 props_df = pd.DataFrame(props)
 print('defects_df')
-print(props_df)
+print((props_df['equivalent_diameter'].max())*0.586)
 
 lab = measure.label(hols)
 cleaned_holes = morphology.remove_small_objects(lab, min_size=47,connectivity=8)
@@ -33,42 +34,46 @@ props_holes_df = pd.DataFrame(props_holes)
 print('holes')
 print(props_holes_df)
 
-"""
 colmap = 'Greys_r'
 bins = 1000
 f, axes = plt.subplots(2, 2, figsize=(20, 20))
 f.subplots_adjust(hspace=0.4)
 # [510:1050,500:1150],extent=(0,316.44,0,380.9)
-img_show = axes[0,0].imshow(img,cmap=colmap, interpolation='none')
+img_show = axes[0,0].imshow(img,cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
 # img_show = axes[0,0].imshow(img,cmap=colmap, interpolation='none')
 f.colorbar(img_show, ax=axes[0,0])
 axes[0,0].set_title('a) Imagen Normalizada')
 scalebarb = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='Black')
 axes[0,0].add_artist(scalebarb)
 
-axes[1,0].hist(img[510:1050,500:1150].ravel(),bins,log=True)
-# axes[1,0].imshow(img,cmap=colmap, interpolation='none')
-axes[1, 0].set_title('b) Histograma Imagen Normalizada')
-axes[1,0].axvline(thresh, color='r')
+# axes[1,0].hist(img.ravel(),bins,log=True)
+# axes[1, 0].set_title('Histograma Imagen Normalizada')
+# axes[1,0].axvline(thresh, color='r')
+# plt.setp(axes[1, 0], xlabel=' Intensidad  [u.a.]')
+# plt.setp(axes[1, 0], ylabel='Número de píxeles')
+#
+axes[1,0].imshow(masked_binary,cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
+axes[1, 0].set_title('c) Imagen Binaria Agujeros Tapados')
+scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='w')
+axes[1,0].add_artist(scalebarw)
 
 
 # img_norm_show = axes[0, 1].imshow(binary[510:1050,500:1150],extent=(0,316.44,0,380.9), cmap=colmap, interpolation='none')
-img_norm_show = axes[0, 1].imshow(binary, cmap=colmap, interpolation='none')
-axes[0, 1].set_title('c) Imagen Binaria Defectos')
+img_norm_show = axes[0, 1].imshow(binary, cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
+axes[0, 1].set_title('b) Imagen Binaria Defectos')
 scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='w')
 axes[0,1].add_artist(scalebarw)
 
 
 # axes[1, 1].imshow(cleaned_holes[510:1050,500:1150],extent=(0,316.44,0,380.9), cmap=colmap, interpolation='none')
-axes[1, 1].imshow(hols, cmap=colmap, interpolation='none')
+axes[1, 1].imshow(cleaned_holes, cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
 axes[1, 1].set_title('d) Imagen Binaria Agujeros')
 scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='w')
 axes[1,1].add_artist(scalebarw)
-plt.setp(axes[0, :], xlabel=' x [\u03BCm]')
-plt.setp(axes[0, :], ylabel='y [\u03BCm]')
-plt.setp(axes[1, 1], xlabel=' x [\u03BCm]')
-plt.setp(axes[1, 1], ylabel='y [\u03BCm]')
+# plt.setp(axes[-1, :], xlabel=' x [\u03BCm]')
+# plt.setp(axes[:, 0], ylabel='y [\u03BCm]')
 plt.show()
+
 """
 colmap = 'Greys_r'
 bins = 1000
@@ -105,3 +110,4 @@ plt.setp(axes[0, :], ylabel='y [\u03BCm]')
 plt.setp(axes[1, 1], xlabel=' x [\u03BCm]')
 plt.setp(axes[1, 1], ylabel='y [\u03BCm]')
 plt.show()
+"""
