@@ -11,7 +11,7 @@ import glob
 
 pixels_to_microns = 0.586
 hole_thresh = 0.975
-proplist = ['equivalent_diameter','perimeter','area','extent']
+proplist = ['equivalent_diameter','area']
 
 path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/norm/*.tif"
 
