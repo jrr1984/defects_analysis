@@ -1,4 +1,4 @@
-from skimage.filters import threshold_yen
+from skimage.filters import threshold_yen,threshold_triangle,threshold_isodata
 from skimage import io,measure,img_as_float,morphology
 from skimage.measure import regionprops_table
 from skimage.color import label2rgb
@@ -8,35 +8,44 @@ import matplotlib.pyplot as plt
 from matplotlib_scalebar.scalebar import ScaleBar
 import pandas as pd
 import cv2
+pixels_to_microns = 0.586
+proplist = ['equivalent_diameter','area']
 
-
-img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/norm/normAzul_112.tif")
+img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaPanc/norm/normPanc_79.tif")
 img = img_as_float(img)
 thresh = threshold_yen(img)
-print(thresh)
 binary = img <= thresh
-masked_binary = ndimage.binary_fill_holes(binary)
-hols = masked_binary.astype(int) - binary
-# cleaned_binary = morphology.remove_small_objects(masked_binary, 2)
-label_image = measure.label(binary)
-proplist = ['area','equivalent_diameter']
-props = regionprops_table(label_image, intensity_image=img, properties=proplist)
+binarymas = img <= (thresh+0.1*thresh)
+binarymenos = img <= (thresh-0.1*thresh)
+
+masked_binary =ndimage.binary_fill_holes(binary)
+masked_binarymas =ndimage.binary_fill_holes(binarymas)
+masked_binarymenos =ndimage.binary_fill_holes(binarymenos)
+label_image = measure.label(masked_binary,connectivity=2)
+label_imagemas = measure.label(masked_binarymas,connectivity=2)
+label_imagemenos = measure.label(masked_binarymenos,connectivity=2)
+label_final = morphology.remove_small_objects(label_image, min_size=200)
+label_finalmas = morphology.remove_small_objects(label_imagemas, min_size=200)
+label_finalmenos = morphology.remove_small_objects(label_imagemenos, min_size=200)
+props = regionprops_table(label_final, intensity_image=img, properties=proplist)
+propsmas = regionprops_table(label_finalmas, intensity_image=img, properties=proplist)
+propsmenos = regionprops_table(label_finalmenos, intensity_image=img, properties=proplist)
 props_df = pd.DataFrame(props)
+props_dfmas = pd.DataFrame(propsmas)
+props_dfmenos = pd.DataFrame(propsmenos)
 print('defects_df')
-print((props_df['equivalent_diameter'].max())*0.586)
+print(props_df)
+print('MAS')
+print(props_dfmas)
+print('MENOS')
+print(props_dfmenos)
+print('ERROR')
+print((props_df-props_dfmenos)/2)
 
-lab = measure.label(hols)
-cleaned_holes = morphology.remove_small_objects(lab, min_size=47,connectivity=8)
-hole_label = measure.label(cleaned_holes)
-
-props_holes = regionprops_table(hole_label, intensity_image=img, properties=proplist)
-props_holes_df = pd.DataFrame(props_holes)
-print('holes')
-print(props_holes_df)
 
 colmap = 'Greys_r'
 bins = 1000
-f, axes = plt.subplots(2, 2, figsize=(20, 20))
+f, axes = plt.subplots(2, 2, figsize=(20, 20),sharex=True,sharey=True)
 f.subplots_adjust(hspace=0.4)
 # [510:1050,500:1150],extent=(0,316.44,0,380.9)
 img_show = axes[0,0].imshow(img,cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
@@ -46,12 +55,6 @@ axes[0,0].set_title('a) Imagen Normalizada')
 scalebarb = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='Black')
 axes[0,0].add_artist(scalebarb)
 
-# axes[1,0].hist(img.ravel(),bins,log=True)
-# axes[1, 0].set_title('Histograma Imagen Normalizada')
-# axes[1,0].axvline(thresh, color='r')
-# plt.setp(axes[1, 0], xlabel=' Intensidad  [u.a.]')
-# plt.setp(axes[1, 0], ylabel='Número de píxeles')
-#
 axes[1,0].imshow(masked_binary,cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
 axes[1, 0].set_title('c) Imagen Binaria Agujeros Tapados')
 scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='w')
@@ -59,14 +62,14 @@ axes[1,0].add_artist(scalebarw)
 
 
 # img_norm_show = axes[0, 1].imshow(binary[510:1050,500:1150],extent=(0,316.44,0,380.9), cmap=colmap, interpolation='none')
-img_norm_show = axes[0, 1].imshow(binary, cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
+img_norm_show = axes[0, 1].imshow(masked_binarymas, cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
 axes[0, 1].set_title('b) Imagen Binaria Defectos')
 scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='w')
 axes[0,1].add_artist(scalebarw)
 
 
 # axes[1, 1].imshow(cleaned_holes[510:1050,500:1150],extent=(0,316.44,0,380.9), cmap=colmap, interpolation='none')
-axes[1, 1].imshow(cleaned_holes, cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
+axes[1, 1].imshow(masked_binarymenos, cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none')
 axes[1, 1].set_title('d) Imagen Binaria Agujeros')
 scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='w')
 axes[1,1].add_artist(scalebarw)

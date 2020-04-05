@@ -18,7 +18,7 @@ print(median)
 
 background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/back_Azul.tif",median)
 
-"""
+
 # bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/back_Azul.tif")
 fig = plt.figure(1)
 # 1 pixel = 0.586 microns
@@ -57,6 +57,6 @@ plt.xlabel(' Intensidad [u.a.]')
 plt.ylabel('Número de píxeles')
 plt.legend(loc='upper right')
 plt.show()
-"""
+
 
 
