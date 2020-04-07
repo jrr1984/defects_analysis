@@ -6,7 +6,8 @@ from skimage import img_as_float
 import seaborn as sns
 
 plt.rcParams["font.size"] = "15"
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/Tiles/*.png"
+# path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/Tiles/*.png"
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/BandaRoja/Tiles/*.png"
 ic = io.ImageCollection(path)
 imgs = io.concatenate_images(ic)
 imgs = img_as_float(imgs)
@@ -16,7 +17,7 @@ print(mean)
 median = np.median(imgs,axis=0).reshape(1920, 1216)
 print(median)
 
-background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/back_Azul.tif",median)
+background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/bandaRoja/back_Roja.tif",median)
 
 
 # bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/back_Azul.tif")

@@ -11,7 +11,7 @@ import cv2
 pixels_to_microns = 0.586
 proplist = ['equivalent_diameter','area']
 
-img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaVerde/norm/normVerde_48.tif")
+img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/AZUL/norm/normAzul_112.tif")
 img = img_as_float(img)
 thresh = threshold_yen(img)
 binary = img <= thresh
@@ -21,6 +21,12 @@ masked_binary =ndimage.binary_fill_holes(binary)
 masked_binarymenos =ndimage.binary_fill_holes(binarymenos)
 label_image = measure.label(masked_binary,connectivity=2)
 label_imagemenos = measure.label(masked_binarymenos,connectivity=2)
+hols = masked_binary.astype(int) - binary
+hols_var = masked_binarymenos.astype(int) - binarymenos
+lab = measure.label(hols,connectivity=2)
+lab_var = measure.label(hols_var, connectivity=2)
+cleaned_holes = morphology.remove_small_objects(lab, connectivity=2)
+cleaned_holes_var = morphology.remove_small_objects(lab_var, connectivity=2)
 label_final = morphology.remove_small_objects(label_image, min_size=100)
 label_finalmenos = morphology.remove_small_objects(label_imagemenos, min_size=100)
 props = regionprops_table(label_final, intensity_image=img, properties=proplist)
@@ -35,7 +41,7 @@ print('ERROR')
 print((props_df-props_dfmenos)/2)
 
 
-colmap = 'gist_gray'
+colmap = 'Greys_r'
 bins = 1000
 f, (ax1,ax2,ax3) = plt.subplots(1, 3, figsize=(20, 20),sharey=True,sharex=True)
 f.subplots_adjust(hspace=0.4)
@@ -52,6 +58,8 @@ ax1.add_artist(scalebarb)
 
 ax2.imshow(masked_binary,cmap='Reds',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 ax2.imshow(masked_binarymenos,cmap='Blues',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
+ax2.imshow(cleaned_holes,cmap='winter',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
+ax2.imshow(cleaned_holes_var,cmap='autumn',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 ax2.set_title('b) Imagen Binaria*')
 scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=10, fixed_units='um', frameon=False, color='Black')
 ax2.add_artist(scalebarw)
@@ -59,8 +67,10 @@ ax2.add_artist(scalebarw)
 
 ax3.imshow(masked_binary,cmap='Reds',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 ax3.imshow(masked_binarymenos,cmap='Blues',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
+ax3.imshow(cleaned_holes,cmap='winter',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
+ax3.imshow(cleaned_holes_var,cmap='autumn',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 ax3.set_title('c) Zoom Borde')
-scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=3, fixed_units='um', frameon=False, color='Black')
+scalebarw = ScaleBar(1, 'um', location='lower right', fixed_value=5, fixed_units='um', frameon=False, color='Black')
 ax3.add_artist(scalebarw)
 ax3.get_shared_x_axes().remove(ax3)
 ax3.get_shared_y_axes().remove(ax3)
