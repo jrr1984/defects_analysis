@@ -6,11 +6,12 @@ import matplotlib.pyplot as plt
 wavel_df = pd.read_pickle("wavel_df.pkl")
 wavel_df = wavel_df.iloc[1:]
 light_df = pd.read_csv("espectro_lampZEISS.csv")
-
+# light_df = pd.read_csv("espectro_lampThorlabs.csv")
+# light_df = pd.read_csv("espectro_lampFiberLite.csv")
 def normalize(arr):
     arr_min = arr.min()
     arr_max = arr.max()
-    return (arr - arr_min) / (arr_max - arr_min)
+    return (arr) / (arr_max)
 
 light_df = np.array(light_df)
 light_df = normalize(light_df)
@@ -18,7 +19,7 @@ light_df = light_df.transpose()
 light_df= light_df[0,:]
 
 from scipy.signal import savgol_filter
-yhat = savgol_filter(light_df, 51, 3)
+yhat = savgol_filter(light_df, 55, 3)
 wavel_df = wavel_df[0:3600]
 yhat = yhat[0:3600]
 
@@ -40,6 +41,6 @@ extent = (np.min(wavelengths), np.max(wavelengths), np.min(y), np.max(y))
 plt.imshow(X, clim=clim, extent=extent, cmap=spectralmap, aspect='auto')
 plt.xlabel('Longitud de onda [nm]',fontsize=30)
 plt.ylabel('Intensidad [a.u.]',fontsize=30)
-
+plt.ylim(bottom=0)
 plt.fill_between(wavelengths, spectrum ,np.max(spectrum), color='w')
 plt.show()

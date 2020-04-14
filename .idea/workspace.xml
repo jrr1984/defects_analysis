@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebd7c2a-ec8d-4bc8-a70a-d61849195602" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MAIN/concats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Defects analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Defects analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN/bg.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/bg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIN/bg_normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/bg_normalization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIN/defects_thresholding.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/defects_thresholding.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIN/plot_agujeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/MAIN/plot_agujeros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/espectro_lampara_ZEISS.py" beforeDir="false" afterPath="$PROJECT_DIR$/light_sources_spectrum.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,17 +20,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="33" column="80" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="80" />
+            <state relative-caret-position="389">
+              <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/light_sources_spectrum.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MAIN/concats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAIN/plot_agujeros.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+            <state relative-caret-position="1166">
+              <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
@@ -69,7 +96,6 @@
       <find>tif 22</find>
       <find>hist</find>
       <find>vertical</find>
-      <find>holes</find>
       <find>remove</find>
       <find>tif 151</find>
       <find>tif 15</find>
@@ -78,6 +104,7 @@
       <find>23.tif</find>
       <find>5</find>
       <find>5.0</find>
+      <find>holes</find>
       <find>nan</find>
     </findStrings>
     <dirStrings>
@@ -106,7 +133,6 @@
         <option value="$PROJECT_DIR$/bg.py" />
         <option value="$PROJECT_DIR$/Banda Celeste/divv.py" />
         <option value="$PROJECT_DIR$/jsadhfjsa.py" />
-        <option value="$PROJECT_DIR$/espectro_lampara_ZEISS.py" />
         <option value="$PROJECT_DIR$/Banda Celeste/bg_normalization_celeste.py" />
         <option value="$PROJECT_DIR$/Banda Celeste/defects_thresholding_celeste.py" />
         <option value="$PROJECT_DIR$/Banda Celeste/bg_celeste.py" />
@@ -130,15 +156,18 @@
         <option value="$PROJECT_DIR$/MAIN/plot_bandas_czi_zeiss.py" />
         <option value="$PROJECT_DIR$/MAIN/bg.py" />
         <option value="$PROJECT_DIR$/MAIN/bg_normalization.py" />
-        <option value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
         <option value="$PROJECT_DIR$/MAIN/plot_agujeros.py" />
+        <option value="$PROJECT_DIR$/MAIN/concats.py" />
+        <option value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
+        <option value="$PROJECT_DIR$/espectro_lampara_ZEISS.py" />
+        <option value="$PROJECT_DIR$/light_sources_spectrum.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -180,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.plot_agujeros">
+  <component name="RunManager" selected="Python.espectro_lampara_ZEISS">
     <configuration name="bg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="defects_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,7 +231,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bg_normalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="concats" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="defects_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -214,7 +243,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/bg_normalization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/concats.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -236,6 +265,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/defects_thresholding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="espectro_lampara_ZEISS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="defects_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\juanr\Documents\defects_analysis\light_sources_spectrum.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,34 +336,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plots_para_figs_tesis" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="defects_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MAIN" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAIN/plots_para_figs_tesis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.plot_agujeros" />
+        <item itemvalue="Python.espectro_lampara_ZEISS" />
         <item itemvalue="Python.defects_thresholding" />
+        <item itemvalue="Python.concats" />
+        <item itemvalue="Python.plot_agujeros" />
         <item itemvalue="Python.bg" />
-        <item itemvalue="Python.bg_normalization" />
-        <item itemvalue="Python.plots_para_figs_tesis" />
       </list>
     </recent_temporary>
   </component>
@@ -469,16 +498,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jsadhfjsa.py" />
-    <entry file="file://$PROJECT_DIR$/espectro_lampara_ZEISS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Banda Celeste/bg_normalization_celeste.py" />
     <entry file="file://$PROJECT_DIR$/Banda Celeste/defects_thresholding_celeste.py" />
     <entry file="file://$PROJECT_DIR$/Banda Celeste/bg_celeste.py" />
@@ -546,16 +565,6 @@
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAIN/bg_plot_and_hist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,6 +647,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MAIN/bg_plot_and_hist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/bg_normalization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -650,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/bg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="32" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -660,17 +679,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/defects_thresholding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="33" column="80" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="80" />
+        <state relative-caret-position="389">
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIN/concats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIN/plot_agujeros.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        <state relative-caret-position="1166">
+          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/light_sources_spectrum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
