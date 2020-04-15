@@ -9,7 +9,7 @@ Repositorio de los programas utilizados en el capítulo 2 de la [Tesis de Licenc
 5. [Algoritmo de detección y cuantificación de los defectos](https://github.com/jrr1984/defects_analysis/blob/master/defects_thresholding.py)
 6. [Método alternativo para detectar agujeros (en desarrollo)](https://github.com/jrr1984/defects_analysis/blob/master/find_contours_holes_trial.py)
 7. [Análisis cuantitativo de los defectos](https://github.com/jrr1984/defects_analysis/blob/master/Defects%20analysis.ipynb)
-8.[Población de defectos en general](https://github.com/jrr1984/defects_analysis/blob/master/general_defects_population.ipynb)
+8. [Población de defectos en general](https://github.com/jrr1984/defects_analysis/blob/master/general_defects_population.ipynb)
 
 [Dependencias del repositorio](https://github.com/jrr1984/defects_analysis/blob/master/dependencias.txt)
 

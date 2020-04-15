@@ -11,7 +11,7 @@ import cv2
 pixels_to_microns = 0.586
 proplist = ['equivalent_diameter','area']
 
-img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/BandaVerde/norm/normVerde_13.tif")
+img = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/AZUL/norm/normAzul_112.tif")
 img = img_as_float(img)
 thresh = threshold_yen(img)
 binary = img <= thresh
@@ -46,13 +46,13 @@ bins = 1000
 f, (ax1,ax2,ax3) = plt.subplots(1, 3, figsize=(20, 20),sharey=True,sharex=True)
 f.subplots_adjust(hspace=0.4)
 # [510:1050,500:1150],extent=(0,316.44,0,380.9)
-img_show = ax1.imshow(img,cmap=colmap,extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
+img_show = ax1.imshow(img,cmap='gray',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 # ax1.imshow(masked_binary,cmap='Greens',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 # ax1.imshow(masked_binarymenos,cmap='winter',extent=(0, 712.58, 0, 1125.12), interpolation='none',alpha=0.5)
 # img_show = axes[0,0].imshow(img,cmap=colmap, interpolation='none')
 # f.colorbar(img_show, ax=ax1)
 ax1.set_title('iii) Imagen Normalizada VERDE')
-scalebarb = ScaleBar(1, 'um', location='lower right', fixed_value=50, fixed_units='um', frameon=False, color='Black')
+scalebarb = ScaleBar(1, 'um', location='lower right', fixed_value=10, fixed_units='um', frameon=False, color='Black')
 ax1.add_artist(scalebarb)
 
 
