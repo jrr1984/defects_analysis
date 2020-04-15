@@ -1,39 +1,62 @@
-import cv2 as cv2
-import numpy as np
-from skimage import exposure,util,io
-from skimage.color import rgb2gray
-import matplotlib.pyplot as plt
-import glob
+import numpy as np #Version: 1.17.3
+import skimage.io as io #Version: 0.16.2
+import matplotlib.pyplot as plt #Version 3.1.2
+from matplotlib_scalebar.scalebar import ScaleBar #Version 0.6.1
+from skimage import img_as_float
+import seaborn as sns
 
-path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/*.png"
+plt.rcParams["font.size"] = "15"
+# path = "C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Azul/Tiles/*.png"
+path = "C:/Users/juanr/Documents/mediciones_ZEISS/bandas/BandaRoja/Tiles/*.png"
+ic = io.ImageCollection(path)
+imgs = io.concatenate_images(ic)
+imgs = img_as_float(imgs)
+print(imgs.shape)
+mean = np.mean(imgs,axis=0).reshape(1920, 1216)
+print(mean)
+median = np.median(imgs,axis=0).reshape(1920, 1216)
+print(median)
 
-imgs = []
-#load the images
-for file in glob.glob(path):
-    img = io.imread(file)
-    imgs.append(img)
+background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/bandaRoja/back_Roja.tif",median)
 
-# Convert images to 4d ndarray, size(n, nrows, ncols, 3)
-imgs = np.asarray(imgs)
-# Take the median over the first dim
-median = np.median(imgs, axis=0)
 
-def normalize(arr):
-    arr_min = arr.min()
-    arr_max = arr.max()
-    return (arr - arr_min) / (arr_max - arr_min)
+# bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/TILING/Celeste/back_Azul.tif")
+fig = plt.figure(1)
+# 1 pixel = 0.586 microns
+#1216 x 1920 pixels = 712.58 x 1125.12 microns
+bg_show = plt.imshow(mean, cmap='Greys_r',extent=(0, 712.58, 0, 1125.12), interpolation='none')
+fig.colorbar(bg_show)
+plt.xlabel(' x [\u03BCm]')
+plt.ylabel('y [\u03BCm]')
+plt.title('Valor Medio')
+#WARNING: according to scalebar documentation:
+# "If the the axes image has already been calibrated by setting its extent, set dx to 1.0."
+scalebar = ScaleBar(1,'um',location='lower right',fixed_value=200,fixed_units='um',frameon=False,color ='w')
+plt.gca().add_artist(scalebar)
+fig.tight_layout()
 
-# median = normalize(median)
+fig = plt.figure(2)
+bg_show = plt.imshow(median, cmap='Greys_r',extent=(0, 712.58, 0, 1125.12), interpolation='none')
+fig.colorbar(bg_show)
+plt.xlabel(' x [\u03BCm]')
+plt.ylabel('y [\u03BCm]')
+plt.title('Mediana')
+#WARNING: according to scalebar documentation:
+# "If the the axes image has already been calibrated by setting its extent, set dx to 1.0."
+scalebar = ScaleBar(1,'um',location='lower right',fixed_value=200,fixed_units='um',frameon=False,color ='w')
+plt.gca().add_artist(scalebar)
+fig.tight_layout()
 
-# median = util.img_as_ubyte(median)
 
-background_img = io.imsave("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/bgnow.png",median)
-
-bg = io.imread("C:/Users/juanr/Documents/mediciones_ZEISS/bandas/Banda2scenes/bgnow.png")
-fig = plt.figure(figsize=(10, 10), frameon=False)
-ax = fig.add_axes([0, 0, 1, 1])
-ax.axis('off')
-plt.imshow(bg, cmap='Greys_r')
+bins = 500
+# bins = np.linspace(0.735, 0.86, 100)
+sns.set(font_scale=1.5);
+plt.figure(3)
+sns.distplot(median.ravel(),hist=True,norm_hist=False,bins=bins,kde=True,label='Mediana')
+sns.distplot(mean.ravel(),hist=True,norm_hist=False,bins=bins,kde=True,label='Valor Medio')
+plt.xlabel(' Intensidad [u.a.]')
+plt.ylabel('Número de píxeles')
+plt.legend(loc='upper right')
 plt.show()
 
 
