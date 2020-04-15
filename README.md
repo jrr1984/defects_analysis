@@ -11,4 +11,6 @@ Repositorio de los programas utilizados en el capítulo 2 de la [Tesis de Licenc
 7. [Análisis cuantitativo de los defectos](https://github.com/jrr1984/defects_analysis/blob/master/Defects%20analysis.ipynb)
 8.[Población de defectos en general](https://github.com/jrr1984/defects_analysis/blob/master/general_defects_population.ipynb)
 
+[Dependencias del repositorio](https://github.com/jrr1984/defects_analysis/blob/master/dependencias.txt)
+
 
